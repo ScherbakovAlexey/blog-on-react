@@ -93,6 +93,16 @@ p {
 	text-decoration: none;
 }
 
+.social_icons {
+	margin-top: 30px;
+}
+.icon {
+	display: inline-block;
+}
+.icon img {
+	padding-right: 20px;
+}
+
 .app {
 	width: 70%;
 	float: right;
