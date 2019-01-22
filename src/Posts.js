@@ -1,3 +1,4 @@
+import React from 'react'
 
 class Posts extends React.Component {
   constructor(props) {
@@ -18,8 +19,8 @@ class Posts extends React.Component {
 			return results.json();
 		}).then(data => {
 			let posts = data.map((pst) => {
-				console.log(pst.title);
-				console.log(pst.userId+pst.id);
+				//console.log(pst.title);
+				//console.log(pst.userId+pst.id);
 				return(
 					<div key={pst.userId+pst.id} className='article'>
 						<p className='news__title'>{pst.title}</p>
@@ -30,7 +31,7 @@ class Posts extends React.Component {
 				) 
 			})
 			this.setState({posts: posts});
-			console.log("state", this.state.posts);
+			//console.log("state", this.state.posts);
 		})
   }
 
@@ -57,21 +58,4 @@ class Posts extends React.Component {
 	}
 }
 
-
-
-var App = React.createClass({
-  render: function() {
-    return (
-      <div className='app'>
-				<Posts />
-      </div>
-    );
-  }
-});
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
-
-
+export default Posts
